@@ -2,12 +2,10 @@ package cmd
 
 import (
 	"context"
+	"task-scheduler/internal/controller"
 
 	"github.com/gogf/gf/v2/frame/g"
-	"github.com/gogf/gf/v2/net/ghttp"
 	"github.com/gogf/gf/v2/os/gcmd"
-
-	"task-schedule/internal/controller/hello"
 )
 
 var (
@@ -17,12 +15,7 @@ var (
 		Brief: "start http server",
 		Func: func(ctx context.Context, parser *gcmd.Parser) (err error) {
 			s := g.Server()
-			s.Group("/", func(group *ghttp.RouterGroup) {
-				group.Middleware(ghttp.MiddlewareHandlerResponse)
-				group.Bind(
-					hello.NewV1(),
-				)
-			})
+			controller.RegisterAPI(s)
 			s.Run()
 			return nil
 		},

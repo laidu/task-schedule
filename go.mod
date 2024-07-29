@@ -1,11 +1,10 @@
-module task-schedule
+module task-scheduler
 
 go 1.18
 
 require (
 	github.com/RichardKnop/machinery/v2 v2.0.13
 	github.com/gogf/gf/v2 v2.7.2
-	github.com/seaung/gin-machinery v0.0.0-20230412040348-e1701f368442
 	github.com/urfave/cli v1.22.5
 )
 
@@ -14,7 +13,6 @@ require (
 	cloud.google.com/go/pubsub v1.10.0 // indirect
 	github.com/BurntSushi/toml v1.3.2 // indirect
 	github.com/RichardKnop/logging v0.0.0-20190827224416-1a693bdd4fae // indirect
-	github.com/RichardKnop/machinery v1.10.8 // indirect
 	github.com/aws/aws-sdk-go v1.37.16 // indirect
 	github.com/bradfitz/gomemcache v0.0.0-20190913173617-a41fca850d0b // indirect
 	github.com/bytedance/sonic v1.8.0 // indirect
