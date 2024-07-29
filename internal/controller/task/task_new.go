@@ -8,7 +8,8 @@ import (
 	"task-scheduler/api/task"
 )
 
-type ControllerV1 struct{}
+type ControllerV1 struct {
+}
 
 func NewV1() task.ITaskV1 {
 	return &ControllerV1{}

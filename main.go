@@ -9,8 +9,13 @@ import (
 )
 
 func main() {
+
+	initCtx := gctx.GetInitCtx()
+
 	// 启动任务调度服务
-	cmd.MachineryServer.Run(gctx.GetInitCtx())
+	go cmd.MachineryServer.Run(initCtx)
+
 	//  启动http 服务
-	cmd.Main.Run(gctx.GetInitCtx())
+	cmd.Main.Run(initCtx)
+
 }
